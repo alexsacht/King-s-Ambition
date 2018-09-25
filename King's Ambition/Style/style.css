@@ -28,6 +28,7 @@ h2
 { font: normal 175% 'century gothic', arial, sans-serif;
   color: #444;}
 
+
 h4, h5, h6
 { margin: 0;
   padding: 0 0 5px 0;
@@ -76,11 +77,23 @@ ol li
 
 #main
 { width: 910px;
-  background: url(content.png) repeat-y;}
+  background: url(content.png) repeat-y;
+  }
 
 #header
 { width: 890px;
-  background: url(back.png) repeat-x;}
+  background: url(back.png) repeat-x;
+}
+
+#body
+{ width: 890px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+
+
+
+}
 
 #logo
 { width: 890px;
@@ -97,7 +110,8 @@ ol li
 { font: normal 300% 'century gothic', arial, sans-serif;
   border-bottom: 0;
   text-transform: none;
-  margin: 0;}
+  margin: 0;
+  text-align:  left}
 
 #logo_text h1, #logo_text h1 a, #logo_text h1 a:hover 
 { padding: 10px 0 0 0;
@@ -106,7 +120,8 @@ ol li
   text-decoration: none;}
 
 #logo_text h1 a .logo_colour
-{ color: #555;}
+{ color: #555;
+}
 
 #logo_text h2
 { font-size: 130%;
