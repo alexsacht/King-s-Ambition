@@ -71,6 +71,11 @@ ol
 ol li
 { margin: 0 0 11px 0;}
 
+#logo_text
+{
+  margin-left: 10px;
+}
+
 #main, #header, #logo, #menubar, #site_content, #footer
 { margin-left: auto; 
   margin-right: auto;}
@@ -90,9 +95,6 @@ ol li
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
-
-
-
 }
 
 #logo
@@ -176,6 +178,9 @@ ul#menu li a:hover
 { width: 890px;
   overflow: hidden;
   background: #F8F8F8;} 
+
+#image
+{padding: 20px 0 15px 30px;}
 
 .sidebar
 { float: right;
