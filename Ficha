@@ -57,36 +57,162 @@
 
 
 
-<layout width="600" height="150" align="top" >
-
-
+<layout width="600" height="250" align="top"  >
 
 
     <label text="Status Pessoal" horzTextAlign="center" width="600" top="15" fontColor="black" fontSize="25" height="20"/>
 
-    <label text="Força:" horzTextAlign="center" width="50" top="50" fontColor="black"/>
+    <label text="FORÇA:" horzTextAlign="trailing" width="50" top="50" fontColor="black" fontStyle="bold"/>
 
-    <edit field="modificadorforca" horzTextAlign="center" width="50" top="50" fontColor="black"/>
+    <edit field="forca" horzTextAlign="center" width="30" top="45" fontColor="black" left="70" />
 
-            <button  top="50" text="+" left="100" onClick="modValor(sheet.modificadorforca)">
+    <label text="DESTREZA:" horzTextAlign="trailing" width="100" top="50" fontColor="black" fontStyle="bold" left="120"/>
 
-            </button>
+    <edit field="destreza" horzTextAlign="center" width="30" top="45" fontColor="black" left="225"/>
+
+    <label text="PERCEPÇÃO:" horzTextAlign="trailing" width="100" top="50" fontColor="black" fontStyle="bold" left="270"/>
+
+    <edit field="percepcao" horzTextAlign="center" width="30" top="45" fontColor="black" left="380"/>
+
+    <label text="INTELIGÊNCIA:" horzTextAlign="trailing" width="100" top="50" fontColor="black" fontStyle="bold" left="410"/>
+
+    <edit field="inteligencia" horzTextAlign="center" width="30" top="45" fontColor="black" left="520"/>
 
 
-            <script>
 
-            local function modValor(mod)
+    <label text="Briga:" horzTextAlign="trailing" width="50" top="85" fontColor="black" />
 
-            mod = mod +1 ;            
+    <edit field="briga" horzTextAlign="center" width="30" top="80" fontColor="black" left="70" />
 
-            end;
+    <label text="Agilidade:" horzTextAlign="trailing" width="100" top="85" fontColor="black" left="120"/>
+
+    <edit field="agilidade" horzTextAlign="center" width="30" top="80" fontColor="black" left="225"/>
+
+    <label text="Visibilidade:" horzTextAlign="trailing" width="100" top="85" fontColor="black" left="270"/>
+
+    <edit field="visibilidade" horzTextAlign="center" width="30" top="80" fontColor="black" left="380"/>
+
+    <label text="Persuasão:" horzTextAlign="trailing" width="100" top="85" fontColor="black" left="410"/>
+
+    <edit field="persuasao" horzTextAlign="center" width="30" top="80" fontColor="black" left="520"/>
 
 
-        </script>
 
+    <label text="Arma:" horzTextAlign="trailing" width="50" top="120" fontColor="black" />
+
+    <edit field="arma" horzTextAlign="center" width="30" top="115" fontColor="black" left="70" />
+
+    <label text="Esquiva:" horzTextAlign="trailing" width="100" top="120" fontColor="black" left="120"/>
+
+    <edit field="esquiva" horzTextAlign="center" width="30" top="115" fontColor="black" left="225"/>
+
+    <label text="Visão:" horzTextAlign="trailing" width="100" top="120" fontColor="black" left="270"/>
+
+    <edit field="visao" horzTextAlign="center" width="30" top="115" fontColor="black" left="380"/>
+
+    <label text="Raciocinio:" horzTextAlign="trailing" width="100" top="120" fontColor="black" left="410"/>
+
+    <edit field="raciocinio" horzTextAlign="center" width="30" top="115" fontColor="black" left="520"/>
+
+
+
+
+    <label text="Distancia:" horzTextAlign="center" width="70" top="155" fontColor="black" />
+
+    <edit field="distancia" horzTextAlign="center" width="30" top="150" fontColor="black" left="70" />
+
+    <label text="Refrexo:" horzTextAlign="trailing" width="100" top="155" fontColor="black" left="120"/>
+
+    <edit field="reflexo" horzTextAlign="center" width="30" top="150" fontColor="black" left="225"/>
+
+    <label text="Furtividade:" horzTextAlign="trailing" width="100" top="155" fontColor="black" left="270"/>
+
+    <edit field="furtividade" horzTextAlign="center" width="30" top="150" fontColor="black" left="380"/>
+
+    <label text="Intimidação:" horzTextAlign="trailing" width="100" top="155" fontColor="black" left="410"/>
+
+    <edit field="intimidação" horzTextAlign="center" width="30" top="150" fontColor="black" left="520"/>
+
+
+
+    <label text="Vigor:" horzTextAlign="trailing" width="50" top="190" fontColor="black" />
+
+    <edit field="vigor" horzTextAlign="center" width="30" top="185" fontColor="black" left="70" />
+
+    <label text="Perícia:" horzTextAlign="trailing" width="100" top="190" fontColor="black" left="120"/>
+
+    <edit field="pericia" horzTextAlign="center" width="30" top="185" fontColor="black" left="225"/>
+
+    <label text="Mira:" horzTextAlign="trailing" width="100" top="190" fontColor="black" left="270"/>
+
+    <edit field="mira" horzTextAlign="center" width="30" top="185" fontColor="black" left="380"/>
+
+    <label text="Negociação:" horzTextAlign="trailing" width="100" top="190" fontColor="black" left="410"/>
+
+    <edit field="negociacao" horzTextAlign="center" width="30" top="185" fontColor="black" left="520"/>
 
 </layout>
 
+<layout width="600" height="150" align="top">
 
+	<label text="HP:" horzTextAlign="trailing" width="40" fontColor="black" top="15" />	
+
+	<edit field="hp" horzTextAlign="center" width="30" fontColor="black" left="50" top="10" />
+
+	<label text="+" horzTextAlign="trailing" width="15" fontColor="black" top="15" left="85" fontSize="20"/>
+
+	<edit field="hp2" horzTextAlign="center" width="30" fontColor="black" left="105" top="10" />	
+
+	<label text="=" horzTextAlign="trailing" width="15" fontColor="black" top="15" left="140" fontSize="20"/>
+
+	<label field="totalhp" horzTextAlign="center" width="40" fontColor="black" top="15" left="160" fontStyle="italic"/>
+
+	<dataLink fields="{'hp','hp2'}">
+
+		<event name="onChange">
+	
+		sheet.totalhp = (tonumber(sheet.hp) or 0) +
+						(tonumber(sheet.hp2) or 0);
+
+			if	sheet.totalhp > 0 then
+				sheet.totalhp = "+" .. sheet.totalhp;
+			end;
+
+		</event>
+
+	</dataLink>
+
+
+<label text="ATK:" horzTextAlign="trailing" width="40" fontColor="black" top="50" />	
+
+	<edit field="atk" horzTextAlign="center" width="30" fontColor="black" left="50" top="45" />
+
+	<label text="+" horzTextAlign="trailing" width="15" fontColor="black" top="50" left="85" fontSize="20"/>
+
+	<edit field="atk2" horzTextAlign="center" width="30" fontColor="black" left="105" top="45" />	
+
+	<label text="=" horzTextAlign="trailing" width="15" fontColor="black" top="50" left="140" fontSize="20"/>
+
+	<label field="totalatk" horzTextAlign="center" width="40" fontColor="black" top="50" left="160" fontStyle="italic"/>
+
+	<dataLink fields="{'atk','atk2'}">
+
+		<event name="onChange">
+	
+		sheet.totalatk = (tonumber(sheet.atk) or 0) +
+						 (tonumber(sheet.atk2) or 0);
+
+			if	sheet.totalatk > 0 then
+				sheet.totalatk = "+" .. sheet.totalatk;
+			end;
+
+		</event>
+
+	</dataLink>
+
+
+
+</layout>
+ 
 
 </form>
