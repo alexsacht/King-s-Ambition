@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form formType="sheetTemplate" dataType="br.rrpg.kingsambition" 
+     title="Modelo Ficha King's Ambition" name="frmkingsambition">
+
+<layout width="600" height="150" align="top"  >
+
+     <image width="400" height="150" style="proportional"  src="image/logo.png" left="100" top="-50"/>
+
+                <!--<label text="Geral" horzTextAlign="center" width="600" top="10" fontColor="black" fontSize="25" height="20"/>-->
+
+
+                <label text="Nome:" horzTextAlign="center" width="50" top="50" fontColor="black"/>
+
+                    <edit field="nome" fontColor="white" width="100" height="30" top="45" left="50" />
+
+                <label text="Classe:" horzTextAlign="center" width="50" top="50" fontColor="black" left="200"/>
+
+                    <edit field="classe" fontColor="white" width="100" height="30" top="45" left="250" />
+
+                 <label text="EXP:" horzTextAlign="center" width="50" top="50" fontColor="black" left="400"/>
+
+                    <edit field="exp" fontColor="white" width="30" height="30" top="45" left="450" />
+
+                <label text="/" horzTextAlign="center" width="10" top="50" fontColor="black" left="480" fontSize="25"/>
+
+                    <edit field="exp_total" fontColor="white" width="30" height="30" top="45" left="495" />
+
+
+                <label text="Gold:" horzTextAlign="center" width="50" top="85" fontColor="black"/>
+
+                    <edit field="gold" fontColor="white" width="50" height="30" top="80" left="50" />
+
+                <label text="Tipo:" horzTextAlign="center" width="50" top="85" fontColor="black" left="200"/>
+
+                    <edit field="tipo" fontColor="white" width="100" height="30" top="80" left="250" />
+
+                <label text="LVL:" horzTextAlign="center" width="50" top="85" fontColor="black" left="400"/>
+
+                    <edit field="lvl" fontColor="white" width="30" height="30" top="80" left="450" />
+
+
+                 <label text="Reino:" horzTextAlign="center" width="50" top="120" fontColor="black"/>
+
+                    <edit field="reino" fontColor="white" width="100" height="30" top="115" left="50" />
+
+                <label text="Rei:" horzTextAlign="center" width="50" top="120" fontColor="black" left="200"/>
+
+                    <edit field="rei" fontColor="white" width="100" height="30" top="115" left="250" />
+
+                 <label text="Herói:" horzTextAlign="center" width="50" top="120" fontColor="black" left="400"/>
+
+                    <edit field="heroi" fontColor="white" width="100" height="30" top="115" left="450" />
+
+</layout>
+
+
+
+
+<layout width="600" height="150" align="top" >
+
+
+
+
+    <label text="Status Pessoal" horzTextAlign="center" width="600" top="15" fontColor="black" fontSize="25" height="20"/>
+
+    <label text="Força:" horzTextAlign="center" width="50" top="50" fontColor="black"/>
+
+    <edit field="modificadorforca" horzTextAlign="center" width="50" top="50" fontColor="black"/>
+
+            <button  top="50" text="+" left="100" onClick="modValor(sheet.modificadorforca)">
+
+            </button>
+
+
+            <script>
+
+            local function modValor(mod)
+
+            mod = mod +1 ;            
+
+            end;
+
+
+        </script>
+
+
+</layout>
+
+
+
+</form>
